@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.container {
+  margin: 4rem auto;
+  padding: 2rem 3rem 3rem;
+  max-width: 500px;
+  background: rgb(149, 230, 196);
+  color: rgba(255, 255, 255);
+  cursor: default;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+  background: rgb(141, 219, 186);
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255);
+  color: rgba(255, 255, 255);
+  height: 2rem;
+}
+
+.true {
+  color: rgb(225, 225, 225);
+  text-decoration: line-through rgb(123, 167, 149);
+}
+.todoButtons {
+  display: flex;
+  height: 2rem;
+}
+
+.todoButtons button {
+  padding: 0 1rem;
+  border: none;
+  background: rgb(141, 219, 186);
   color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.todoButtons button svg {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.activeButton:hover {
+  cursor: pointer;
+}
+
+.todoButtons .activeButton:hover svg {
+  fill: rgb(96, 164, 136);
+}
+
+.disabled:hover {
+  cursor: not-allowed;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.newTodo {
+  padding-top: 30px;
+}
+
+.newTodo h2 {
+  margin: 5px 0;
+}
+
+.inputButton {
+  display: flex;
+  height: 3rem;
+}
+
+.inputButton input {
+  flex-grow: 1;
+  border: none;
+  background: #f7f1f1;
+  padding: 0 1em;
+  font-size: initial;
+  color: rgb(87, 153, 125);
+}
+
+.inputButton input:focus {
+  outline: none;
+  border: 1px solid rgb(87, 153, 125);
+}
+
+.inputButton button {
+  padding: 0 1.3rem;
+  border: none;
+  background: rgb(141, 219, 186);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255);
+  margin-left: 5px;
+}
+
+.activeAdd:hover {
+  background: rgb(124, 195, 165);
+  cursor: pointer;
+}
+
+.inputButton button:disabled {
+  cursor: not-allowed;
+  background: rgb(176, 227, 205);
 }

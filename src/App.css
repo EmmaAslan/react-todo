@@ -144,4 +144,14 @@ ul {
   .newTodo {
     padding-top: 0;
   }
+  .todoButtons button {
+    padding: 0;
+
+    margin-left: 3em;
+  }
+  .todoButtons button svg {
+    width: 2em;
+    height: 2em;
+    padding: 0 5px;
+  }
 }

@@ -41,44 +41,46 @@ const Todos = () => {
 
   return (
     <div className="container">
-      <h1>Todo List</h1>
-
-      {todoList.map((todo) => (
+      <div className="todoContainer">
+        <h1>Todo List</h1>
+        <p>Total number of todos: {todoList.length}</p>
         <div className="todoList">
-          <ul>
-            <li key={todo.id} className="list">
-              <span className={todo.complete === true && "true"}>
-                {todo.complete === false ? "false" : "true"} - {todo.label}
-              </span>
-              <div className="todoButtons">
-                {todo.complete === true ? (
-                  <button disabled className="disabled">
-                    <FaCheck />
-                  </button>
-                ) : (
+          {todoList.map((todo) => (
+            <ul>
+              <li key={todo.id} className="list">
+                <span className={todo.complete === true && "true"}>
+                  {todo.label}
+                </span>
+                <div className="todoButtons">
+                  {todo.complete === true ? (
+                    <button disabled className="disabled">
+                      <FaCheck />
+                    </button>
+                  ) : (
+                    <button
+                      className="activeButton"
+                      onClick={() => {
+                        completeTodo(todo.id);
+                      }}
+                    >
+                      <FaCheck />
+                    </button>
+                  )}
+
                   <button
                     className="activeButton"
                     onClick={() => {
-                      completeTodo(todo.id);
+                      deleteTodo(todo.id);
                     }}
                   >
-                    <FaCheck />
+                    <FaTrash />
                   </button>
-                )}
-
-                <button
-                  className="activeButton"
-                  onClick={() => {
-                    deleteTodo(todo.id);
-                  }}
-                >
-                  <FaTrash />
-                </button>
-              </div>
-            </li>
-          </ul>
+                </div>
+              </li>
+            </ul>
+          ))}
         </div>
-      ))}
+      </div>
 
       <div className="newTodo">
         <h2>New todo</h2>

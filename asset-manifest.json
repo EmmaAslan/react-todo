@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EmmaAslan/react-todo/static/css/main.ab7a4a86.css",
+    "main.js": "/EmmaAslan/react-todo/static/js/main.a380790a.js",
+    "static/js/787.06469d7b.chunk.js": "/EmmaAslan/react-todo/static/js/787.06469d7b.chunk.js",
+    "index.html": "/EmmaAslan/react-todo/index.html",
+    "main.ab7a4a86.css.map": "/EmmaAslan/react-todo/static/css/main.ab7a4a86.css.map",
+    "main.a380790a.js.map": "/EmmaAslan/react-todo/static/js/main.a380790a.js.map",
+    "787.06469d7b.chunk.js.map": "/EmmaAslan/react-todo/static/js/787.06469d7b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab7a4a86.css",
+    "static/js/main.a380790a.js"
+  ]
+}

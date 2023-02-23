@@ -18,8 +18,6 @@ const Todos = () => {
     setTodoList(newTodoItems);
   };
 
-  console.log("todoList", todoList);
-
   let todoValue = (e) => {
     setNewTodo(e.target.value);
   };
